@@ -13,23 +13,25 @@
 
     <!--版本管理-->
     <properties>
-        <spring.boot.version>2.6.11</spring.boot.version>
-        <spring.cloud.version>2021.0.4</spring.cloud.version>
-        <spring.cloud.alibaba.version>2021.0.4.0</spring.cloud.alibaba.version>
+        <java.version>11</java.version>
+        <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
+        <spring.cloud.alibaba.version>2.2.10-RC1</spring.cloud.alibaba.version>
+        <spring.cloud.starter.oauth2.version>2.2.5.RELEASE</spring.cloud.starter.oauth2.version>
         <lombok.version>1.18.24</lombok.version>
         <dubbo.version>3.1.5</dubbo.version>
+        <dubbo.kryo.version>2.7.20</dubbo.kryo.version>
+        <alibaba.spring.context.support.version>1.0.11</alibaba.spring.context.support.version>
+        <hikaricp.version>5.0.1</hikaricp.version>
+        <mysql.connector.java.version>8.0.32</mysql.connector.java.version>
+        <mybatis.version>2.2.2</mybatis.version>
+        <tk.mybatis.version>4.2.2</tk.mybatis.version>
+        <lombok.version>1.18.24</lombok.version>
+        <fastjson2.version>2.0.23</fastjson2.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <!--SpringBoot依赖-->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -43,6 +45,18 @@
                 <version>${spring.cloud.alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!-- Alibaba Spring Context extension -->
+            <dependency>
+                <groupId>com.alibaba.spring</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${alibaba.spring.context.support.version}</version>
+            </dependency>
+            <!-- oauth2 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-oauth2</artifactId>
+                <version>${spring.cloud.starter.oauth2.version}</version>
             </dependency>
 
             <!-- lombok -->
@@ -58,6 +72,55 @@
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo</artifactId>
                 <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-registry-nacos</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-serialization-kryo</artifactId>
+                <version>${dubbo.kryo.version}</version>
+            </dependency>
+
+            <!-- HikariCP -->
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikaricp.version}</version>
+            </dependency>
+
+            <!-- mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.java.version}</version>
+            </dependency>
+
+            <!-- mybatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${tk.mybatis.version}</version>
+            </dependency>
+
+
+            <!-- fastjson2 -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
             </dependency>
 
         </dependencies>
