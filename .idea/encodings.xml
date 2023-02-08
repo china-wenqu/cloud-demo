@@ -2,7 +2,35 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer/consumer-admin-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/message-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/message-consumer/admin-login-log-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/message-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/message-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/message-producer/admin-login-log-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/message-producer/admin-login-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/message-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/message-producer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/message-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/message/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oauth2-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oauth2/oauth2-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oauth2/oauth2-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/oauth2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/oauth2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/news/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/provider-admin/provider-admin-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/provider-admin/provider-admin-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/provider-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/provider-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/provider-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/provider-news/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

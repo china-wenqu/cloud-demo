@@ -5,7 +5,20 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth2/pom.xml" />
+        <option value="$PROJECT_DIR$/message/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/message/message-api/pom.xml" />
+        <option value="$PROJECT_DIR$/message/message-producer/admin-login-log/pom.xml" />
+        <option value="$PROJECT_DIR$/message/message-service/pom.xml" />
+        <option value="$PROJECT_DIR$/oauth2-server/pom.xml" />
+        <option value="$PROJECT_DIR$/provider/news/pom.xml" />
+        <option value="$PROJECT_DIR$/provider/provider-api/pom.xml" />
+        <option value="$PROJECT_DIR$/provider/provider-news/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
