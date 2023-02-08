@@ -1,0 +1,48 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /admin
+
+spring:
+  application:
+    name: consumer-admin-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.253.199:8848
+    sentinel:
+      transport:
+        dashboard: 192.168.253.199:8888
+    stream:
+      rocketmq:
+        binder:
+          name-server: 192.168.253.199:9876
+        bindings:
+          admin-login-log-topic: { consumer.orderly: true }
+      bindings:
+        admin-login-log-topic: { destination: admin-login-log-topic, content-type: text/plain, group: admin-login-log-group, consumer.maxAttempts: 1 }
+
+
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      access-token-uri: http://localhost:9001/oauth/token
+      user-authorization-uri: http://localhost:9001/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:9001/oauth/check_token
+
+dubbo:
+  registry:
+    address: nacos://192.168.253.199:8848
+  protocol:
+    name: dubbo
+    port: -1
+    serialization: kryo
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

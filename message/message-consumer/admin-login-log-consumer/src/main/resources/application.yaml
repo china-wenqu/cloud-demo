@@ -1,0 +1,32 @@
+server:
+  port: 8602
+
+spring:
+  application:
+    name: message-admin-login-log-consumer
+    stream:
+      rocketmq:
+        binder:
+          name-server: 192.168.253.199:9876
+        bindings:
+          admin-login-log-topic: { consumer.orderly: true }
+      bindings:
+        admin-login-log-topic: { destination: admin-login-log-topic, content-type: text/plain, group: admin-login-log-group }
+
+dubbo:
+  application:
+    name: message-admin-login-log-consumer-dubbo
+  registry:
+    address: nacos://192.168.253.199:8848
+  protocol:
+    name: dubbo
+    port: -1
+    serialization: kryo
+  provider:
+    loadbalance: roundrobin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

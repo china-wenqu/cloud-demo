@@ -1,0 +1,49 @@
+server:
+  port: 8601
+
+spring:
+  application:
+    name: message-admin-login-log-producer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.253.199:8848
+    sentinel:
+      transport:
+        dashboard: 192.168.253.199:8080
+    stream:
+      rocketmq:
+        binder:
+          name-server: 192.168.253.199:9876
+      bindings:
+        output:
+          destination: test-topic
+          content-type: application/json
+
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      access-token-uri: http://localhost:9001/oauth/token
+      user-authorization-uri: http://localhost:9001/oauth/authorize
+    resource:
+      token-info-uri: http://localhost:9001/oauth/check_token
+
+dubbo:
+  application:
+    name: message-admin-login-log-producer-dubbo
+  registry:
+    address: nacos://192.168.253.199:8848
+  protocol:
+    name: dubbo
+    port: -1
+    serialization: kryo
+  provider:
+    loadbalance: roundrobin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
